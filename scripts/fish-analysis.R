@@ -11,4 +11,6 @@ fish_data_cat <-  fish_data %>%
 ggplot(data = fish_data_cat, mapping = aes(length, scalelength, color = lakeid)) +
   geom_point()
 
+
+
   
