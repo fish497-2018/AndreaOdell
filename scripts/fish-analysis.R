@@ -11,6 +11,8 @@ fish_data_cat <-  fish_data %>%
 ggplot(data = fish_data_cat, mapping = aes(length, scalelength, color = lakeid)) +
   geom_point()
 
+ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+  geom_histogram()
 
 
   
