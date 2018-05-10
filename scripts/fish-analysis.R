@@ -8,20 +8,22 @@ fish_data_cat <-  fish_data %>%
   filter(scalelength > 1)
 
 
+## histogram of length vs scalelength vs lakeid (colored)
 ggplot(data = fish_data_cat, mapping = aes(length, scalelength, color = lakeid)) +
   geom_point()
 
+
+## histogram of scalelength by size
 ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
   geom_histogram()
 
 scale_hist_by_length <- ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
   geom_histogram()
 
-ggsave("scale_hist_by_length.jpeg")
+ggsave("figures/scale_hist_by_length.jpeg")
 
 
-
-#Plot histogram of scale length by fish categorical size
+## Plot histogram of scale length by fish categorical size
 length_fish_size_histogram <- ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
   geom_histogram(bins = 80)
 
