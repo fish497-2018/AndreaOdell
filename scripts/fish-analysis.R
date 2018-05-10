@@ -22,6 +22,12 @@ ggsave("scale_hist_by_length.jpeg")
 
 
 #Plot histogram of scale length by fish categorical size
-ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
-  geom_histogram()
+length_fish_size_histogram <- ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+  geom_histogram(bins = 80)
+
+ggsave("figures/length_fish_size_histogram.jpeg")
+
+
+
+
 
